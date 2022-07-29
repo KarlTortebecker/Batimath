@@ -3,16 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Karl/Documents/NetBeansProjects/Batimath/src/batimath/ViewChoice.fxml</file>
             <file>file:/C:/Users/Karl/Documents/NetBeansProjects/Batimath/src/batimath/AlertBox.java</file>
+            <file>file:/C:/Users/Karl/Documents/NetBeansProjects/Batimath/src/batimath/view/ViewChoice.fxml</file>
             <file>file:/C:/Users/Karl/Documents/NetBeansProjects/Batimath/src/batimath/Mur.java</file>
-            <file>file:/C:/Users/Karl/Documents/NetBeansProjects/Batimath/src/batimath/Mur2.fxml</file>
-            <file>file:/C:/Users/Karl/Documents/NetBeansProjects/Batimath/src/batimath/ViewHome.fxml</file>
             <file>file:/C:/Users/Karl/Documents/NetBeansProjects/Batimath/src/batimath/Controller.java</file>
-            <file>file:/C:/Users/Karl/Documents/NetBeansProjects/Batimath/src/batimath/devisMur.fxml</file>
+            <file>file:/C:/Users/Karl/Documents/NetBeansProjects/Batimath/src/batimath/view/ViewHome.fxml</file>
             <file>file:/C:/Users/Karl/Documents/NetBeansProjects/Batimath/src/batimath/Batimath.java</file>
             <file>file:/C:/Users/Karl/Documents/NetBeansProjects/Batimath/src/batimath/css/view.css</file>
             <file>file:/C:/Users/Karl/Documents/NetBeansProjects/Batimath/src/batimath/Parpaing.java</file>
+            <file>file:/C:/Users/Karl/Documents/NetBeansProjects/Batimath/src/batimath/view/devisMur.fxml</file>
             <file>file:/C:/Users/Karl/Documents/NetBeansProjects/Batimath/src/batimath/DevisMurController.java</file>
         </group>
     </open-files>

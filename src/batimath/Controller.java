@@ -37,6 +37,7 @@ public class Controller implements Initializable {
         Parent root;
 
         if(event.getSource()==btn1){
+             DevisMurController.i++;
              stage = (Stage) btn1.getScene().getWindow();
              root = FXMLLoader.load(getClass().getResource("view/ViewChoice.fxml"));
              

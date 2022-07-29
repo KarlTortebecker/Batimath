@@ -1,7 +1,4 @@
- /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package batimath;
 
 /**
@@ -41,11 +38,11 @@ public class Mur {
         return (int) (this.Hm / p.getLp());
     }
 
-    public double Vbeton(double eb, double ep, double hp, Parpaing p){
-        return (this.nbrePaL(p) * this.nbrePal(p) * p.Rembour(p.getTypeP()) + ((this.Hm/25)+ 1 )*eb*ep*this.Lm + (this.Lm/55 - 2)*eb*hp*this.Hm )*0.001;
+  public double Vmortier(double em, double ep, double hp, Parpaing p){
+       return (((this.Hm/25)+ 1 )*em*ep*this.Lm + (this.Lm/55 - 2)*em*hp*this.Hm )*0.001;
     }
 
-    public double Vmortier(double em){
+    public double VmortierCre(double em){
         return (this.Hm * this.Lm * em);
     }
 

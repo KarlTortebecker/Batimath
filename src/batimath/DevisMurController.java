@@ -15,6 +15,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -28,29 +29,30 @@ import javafx.stage.Stage;
 public class DevisMurController implements Initializable {
     
     static int nbreM;
-    static int i = 1;
+    static int i = 0;
 
     @FXML
     private ChoiceBox choicebox;
 
     @FXML
-    private TextField Hm,Lm,eb;    
+    private TextField Hm, Lm, em, lc, Lc, ec, Pc, Pci, Pe, Ps, Pp;    
 
     @FXML
     private Button valider, btn1, btn2;
 
     @FXML
-    private Label vb, vc, ve, vs, vg, np, yes,yos;
+    private Label vm, vc, ve, vs, pc, pci, pe, ps, pp, np,nc, yes,yos;
+
+    private CheckBox crepis, carre;
 
     @FXML
     public void devis(ActionEvent event) throws Exception{
         Mur mur = new Mur(Double.parseDouble(Lm.getText()), Double.parseDouble(Hm.getText()));
         Parpaing p = new Parpaing((int) choicebox.getSelectionModel().getSelectedItem());
-        double Vb = mur.Vbeton(Double.parseDouble(eb.getText()), p.getEp(), p.getHp(), p);
+        double Vb = mur.Vmortier(Double.parseDouble(em.getText()), p.getEp(), p.getHp(), p);
        
-        vb.setText(String.valueOf(Vb));
+        vm.setText(String.valueOf(Vb));
         vc.setText(String.valueOf(0.15*Vb));
-        vg.setText(String.valueOf(0.42*Vb));
         vs.setText(String.valueOf(0.36*Vb));
         ve.setText(String.valueOf(0.07*Vb));
         np.setText(String.valueOf((int)mur.nbrePal(p)*mur.nbrePaL(p)));
@@ -85,7 +87,22 @@ public class DevisMurController implements Initializable {
 
     }
 
-   
+    // Pour gérer le crepissage en cas de besoin
+    @FXML
+    private void crepissage(ActionEvent event) throws Exception{
+        ec.setVisible(true);        
+    }
+
+    // Pour gérer le carrelage en cas de besoin
+    @FXML
+    private void carrelage(ActionEvent event){
+        lc.setVisible(true);
+        Lc.setVisible(true);
+        pc.setVisible(true);
+        nc.setVisible(true);
+        Pc.setVisible(true);
+    }
+
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -94,9 +111,18 @@ public class DevisMurController implements Initializable {
         // We populate the choicebox
         choicebox.setItems(list);
 
-        
+ // Cacher les elements de carrelage
+        ec.setVisible(false);
+        lc.setVisible(false);
+        Lc.setVisible(false);
+        pc.setVisible(false);
+        Pc.setVisible(false);
+        nc.setVisible(false);
+
         yes.setText(String.valueOf(nbreM));
         yos.setText(String.valueOf(i));
+ 
+        if(nbreM == i){ btn1.setDisable(true);}  // Au cas où l'on entre un seul mur pour devis.
     }    
     
 }
