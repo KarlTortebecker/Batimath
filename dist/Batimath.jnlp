@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="Batimath.jar" size="24797" download="eager" />
+    <jar href="Batimath.jar" size="26949" download="eager" />
   </resources>
   <jfx:javafx-desc  width="800" height="600" main-class="batimath.Batimath"  name="Batimath" />
   <update check="always"/>

@@ -23,6 +23,9 @@ import javafx.stage.Stage;
  * @author Karl
  */
 public class Controller implements Initializable {
+    
+    static int nbreOuv;  
+
 
     @FXML
     private Label lbl1, lbl2;
@@ -44,7 +47,9 @@ public class Controller implements Initializable {
         }
         else{
             stage = (Stage) btn2.getScene().getWindow();
-            this.alert(event);
+            this.alert(event,"Nombre de murs", "Veuillez entrer le nombre de murs");
+            this.alert(event,"Nombre d'ouvertures", "Entrez le nombre d'ouvertures du mur");
+            this.alertOuv(event, DevisMurController.nbreO);
             root = FXMLLoader.load(getClass().getResource("view/devisMur.fxml"));
             DevisMurController.i++;
         }
@@ -55,9 +60,16 @@ public class Controller implements Initializable {
     }
 
     @FXML
-    private void alert(ActionEvent event) throws Exception {
-        AlertBox.display("Nombre de murs", "Veuillez entrer le nombre de murs");
+    public static void alert(ActionEvent event, String title, String message) throws Exception {
+        AlertBox.display(title, message);
         
+    }
+    @FXML
+    public static void alertOuv(ActionEvent event, int nbreOuv) throws Exception {
+        for(int i=1; i<= nbreOuv; i++){
+            AlertBox.display(i);
+        }
+                
     }
 
     @Override
